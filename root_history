@@ -1,0 +1,338 @@
+    1  systemctl status nginx
+    2  dnf update
+    3  shutdown now
+    4  ls
+    5  ls -all /etc/pki/
+    6  cd /etc/pki/
+    7  mkdir nginx
+    8  mkdir nginx/private
+    9  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/nginx/server.key -out /etc/pki/server.crt
+   10  ls
+   11  ls nginx/
+   12  mv server.crt nginx/
+   13  ls
+   14  mv nginx/server.key nginx/private/
+   15  ls nginx/
+   16  ip a
+   17  clear
+   18  dnf install nginx
+   19  clear
+   20  cd /etc/nginx/
+   21  ls
+   22  mkdir sites-available
+   23  cd sites-available/
+   24  vim vmoshnin
+   25  dnf install vim
+   26  vim vmoshnin
+   27  systemctl status nginx
+   28  systemctl start nginx
+   29  systemctl status nginx
+   30  systemctl enable nginx
+   31  systemctl status nginx
+   32  cd ..
+   33  mkdir sites-enabled
+   34  cd sites-
+   35  cd sites-enabled/
+   36  ln -s /etc/nginx/sites-available/vmoshnin /etc/nginx/sites-enabled/
+   37  ls
+   38  cd ..
+   39  vim nginx.conf
+   40  nginx -t
+   41  vim sites-enabled/vmoshnin 
+   42  nginx -t
+   43  vim nginx.conf
+   44  nginx -t
+   45  vim sites-enabled/vmoshnin 
+   46  cd /var/
+   47  ls
+   48  ls -all
+   49  mkdir www
+   50  cd www/
+   51  ls
+   52  mkdir vmoshnin
+   53  vim vmoshnin/index.html
+   54  systemctl restart nginx
+   55  systemctl status nginx
+   56  sudo firewall-cmd --permanent --add-service=http 
+   57  sudo firewall-cmd --permanent --add-service=https
+   58  systemctl restart nginx
+   59  ls /usr/share/nginx/
+   60  ls -all
+   61  ls
+   62  pwd
+   63  ls -all /usr/share/nginx/
+   64  ls -all /usr/share/nginx/html/
+   65  systemctl status nginx
+   66  nginx -t
+   67  systemctl restart nginx
+   68  system status nginx
+   69  systemctl status nginx
+   70  ls -all
+   71  cd /usr/share/nginx/html/
+   72  ls
+   73  vim /etc/nginx/sites-enabled/vmoshnin 
+   74  systemctl restart nginx
+   75  vim /etc/nginx/sites-enabled/vmoshnin 
+   76  ss -tulpn
+   77  ip a
+   78  vim /etc/nginx/nginx.conf
+   79  tail -f /var/log/nginx/access.log 
+   80  cat /var/log/nginx/access.log 
+   81  vim /etc/nginx/nginx.conf
+   82  cat /var/log/nginx/error.log 
+   83  vim /etc/nginx/nginx.conf
+   84  systemctl status firewalld
+   85  systemctl stop firewalld
+   86  systemctl status firewalld
+   87  history
+   88  systemctl start firewalld
+   89  vim /etc/nginx/sites-enabled/
+   90  vim /etc/nginx/sites-enabled/vmoshnin 
+   91  systemctl restart nginx
+   92  ls /var/www/vmoshnin/
+   93  ls /var/www/vmoshnin/index.html 
+   94  ls -all /usr/share/
+   95  ls -alld /usr/share/
+   96  ls -alld /usr/share/nginx/
+   97  ls -alld /usr/share/nginx/html/
+   98  ls -alld /usr/share/nginx/html/index.html 
+   99  vim /etc/nginx/nginx.conf
+  100  ls -alld /usr/share/nginx/
+  101  ls -alld /usr/share/nginx/html/index.html 
+  102  ls -all /var/www/vmoshnin/
+  103  ls -alld /var/www/vmoshnin/
+  104  man mv
+  105  ls
+  106  pwd
+  107  vim /etc/nginx/sites-enabled/
+  108  vim /etc/nginx/sites-enabled/vmoshnin 
+  109  systemctl restart nginx
+  110  cd /usr/share/nginx/
+  111  mkdir vmoshnin
+  112  vim vmoshnin/index.html
+  113  systemctl restart nginx
+  114  vim /etc/nginx/sites-enabled/vmoshnin 
+  115  systemctl restart nginx
+  116  vim /etc/nginx/sites-enabled/vmoshnin 
+  117  pwd
+  118  cd vmoshnin/
+  119  ls
+  120  pwd
+  121  vim /etc/nginx/sites-enabled/vmoshnin 
+  122  systemctl restart nginx
+  123  dnf install php php-fpm
+  124  clear
+  125  systemctl start php-fpm
+  126  systemctl status php-fpm
+  127  systemctl enable php-fpm
+  128  systemctl status php-fpm
+  129  vim /etc/nginx/sites-enabled/vmoshnin 
+  130  systemctl restart nginx
+  131  nginx -t
+  132  ls
+  133  mv index.html index.php
+  134  vim index.php 
+  135  nginx -t
+  136  vim /etc/nginx/sites-enabled/vmoshnin 
+  137  nginx -t
+  138  systemctl restart nginx
+  139  systemctl status php-fpm
+  140  cd /etc/nginx/
+  141  ls
+  142  vim fastcgi_params
+  143  vim sites-enabled/vmoshnin 
+  144  nginx -t
+  145  which php-fpm
+  146  vim sites-enabled/vmoshnin 
+  147  vim /var/run/php-fpm/www.sock 
+  148  sudo vim /var/run/php-fpm/www.sock 
+  149  ls -all /var/run/php-fpm/www.sock 
+  150  vim sites-enabled/vmoshnin 
+  151  cd /etc/php
+  152  ls -all /etc/php-fpm.d/
+  153  vim /etc/php-fpm.d/www.conf 
+  154  systemctl restart php-fpm
+  155  systemctl restart nginx
+  156  nginx -t
+  157  vim /etc/nginx/sites-enabled/vmoshnin o
+  158  vim /etc/nginx/sites-enabled/vmoshnin
+  159  nginx -t
+  160  vim /etc/nginx/sites-enabled/vmoshnin
+  161  nginx -t
+  162  systemctl restart nginx
+  163  systemctl restart php-fpm
+  164  vim nginx.conf
+  165  vim sites-enabled/vmoshnin 
+  166  nginx -t
+  167  systemctl restart nginx
+  168  vim nginx.conf
+  169  vim sites-enabled/vmoshnin 
+  170  ls /etc/pki/
+  171  nginx -V
+  172  vim nginx.conf
+  173  vim sites-enabled/vmoshnin 
+  174  nginx -t
+  175  vim sites-enabled/vmoshnin 
+  176  nginx -t
+  177  systemctl restart nginx
+  178  systemctl restart php-fpm
+  179  systemctl status nginx
+  180  systemctl status php-fpm
+  181  vim sites-enabled/vmoshnin 
+  182  systemctl restart nginx
+  183  vim sites-enabled/vmoshnin 
+  184  nginx -t
+  185  systemctl restart nginx
+  186  vim sites-enabled/vmoshnin 
+  187  systemctl restart nginx
+  188  clear
+  189  visudo
+  190  history
+  191  clear
+  192  vim sites-enabled/vmoshnin 
+  193  traceroute
+  194  tcpdump
+  195  telnet
+  196  dnf install traceroute
+  197  dnf install tcpdump
+  198  dnf install telnet
+  199  vim /etc/hosts 
+  200  hostname -f 
+  201  hostname -s
+  202  vim /etc/hosts
+  203  vim /etc/hostname
+  204  hostname -f 
+  205  hostname -s
+  206  ip a
+  207  reboot now
+  208  hostname -f 
+  209  hostname -s
+  210  dnf install proftpd proftpd-utils
+  211  dnf install epel-release
+  212  dnf repolist
+  213  dnf install proftpd proftpd-utils
+  214  systemctl status proftpd
+  215  systemctl start proftpd
+  216  systemctl enable proftpd
+  217  ip a
+  218  firewall-cmd –add-service=ftp
+  219  systemctl status firewalld
+  220  ss -tulpn
+  221  systemctl stop firewalld
+  222  systemctl status firewalld
+  223  systemctl start firewalld
+  224  firewall-cmd --permanent --add-port=21/tcp
+  225  firewall-cmd --reload
+  226  useradd vladislav
+  227  passwd vladislav
+  228  ls
+  229  mkdir /home/vladislav/test
+  230  ls -all /home/vladislav/
+  231  systemctl restart proftpd
+  232  systemctl status proftpd
+  233  date
+  234  systemctl stop firewalld
+  235  firewall-cmd --list-all
+  236  systemctl start firewalld
+  237  firewall-cmd --list-all
+  238  firewall-cmd --add-service=ftp --permanent
+  239  firewall-cmd --list-all
+  240  firewall-cmd -reload
+  241  firewall-cmd --reload
+  242  firewall-cmd --list-all
+  243  systemctl status firewalld
+  244  firewall-cmd --list-all
+  245  visudo
+  246  clear
+  247  useradd vladislav2
+  248  ls /home/
+  249  man usermod
+  250  usermod -a -G wheel vladislav2
+  251  id vladislav2
+  252  passwd vladislav2
+  253  timedatectl set-ntp true
+  254  chrony
+  255  dnf install chrony
+  256  systemctl status chronyd
+  257  vim /etc/chrony.conf 
+  258  firewall-cmd --permanent --add-service=ntp
+  259  firewall-cmd --list-all
+  260  firewall-cmd --reload
+  261  date
+  262  chronyc sources
+  263  timedatectl set-timezone Asia/Krasnoyarsk
+  264  date
+  265  clear
+  266  systemctl is-enabled chronyd
+  267  systemctl is-enabled ngins
+  268  systemctl is-enabled nginx
+  269  systemctl is-enabled proftpd
+  270  dnf module list postgresql
+  271  dnf module enable postgresql:15
+  272  dnf install postgresql-server
+  273  postgresql-setup --initdb
+  274  systemctl start postgresql
+  275  systemctl enable postgresql
+  276  systemctl status postgresql
+  277  sudo -i -u postgres
+  278  reboot now
+  279  clear
+  280  cd /tmp/
+  281  ls
+  282  cd ..
+  283  cd /tmp/
+  284  ls
+  285  mv /home/vladislav2/mailbox_test_new.csv /home/vladislav2/alias_test_new.csv /tmp/
+  286  ls
+  287  pwd
+  288  ls
+  289  ls -all
+  290  vim /etc/passwd
+  291  chown postgres alias_test_new.csv
+  292  ls -all
+  293  ls
+  294  clear
+  295  cd /var/lib/pgsql/data/
+  296  vim postgresql.conf
+  297* 
+  298  vim postgresql.conf
+  299  rpm -qd postgresql
+  300  rpm -qc postgresql
+  301  cd /var/lib/pgsql/data/
+  302  vim pg_hba.conf 
+  303  ls
+  304  date
+  305  sudo -i -u postgres
+  306  history
+  307  vim /etc/nginx/nginx.conf
+  308  vim /etc/nginx/sites-enabled/vmoshnin 
+  309  vim /etc/nginx/nginx.conf
+  310  cat /etc/os-release 
+  311  ls /etc/nginx/
+  312  ls -all /etc/nginx/
+  313  ls -all /etc/nginx/sites-available/
+  314  ls -all /etc/nginx/sites-enabled/
+  315  vim /etc/passwd
+  316  ls /home/vladislav
+  317  ls /home/vladislav2/
+  318  ip a
+  319  su - postgres -c "psql -c 'SHOW config_file;'"
+  320  vim /var/lib/pgsql/data/postgresql.conf 
+  321  vim /var/lib/pgsql/data/pg_hba.conf 
+  322  sudo -i -u postgres
+  323  history | grep install
+  324  history | grep "systemctl start nginx"
+  325  history | grep "systemctl enable nginx"
+  326  history | grep useradd
+  327  history
+  328  vim /home/postgres/backup_script.sh 
+  329  history | grep Asia
+  330  history | grep chrony
+  331  history | grep traceroute
+  332  history | grep tcpdump
+  333  history | grep telnet
+  334  cat /etc/os-release 
+  335  cat /etc/hosts 
+  336  clear
+  337  pwd
+  338  history > root_history
