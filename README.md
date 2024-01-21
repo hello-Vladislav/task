@@ -230,5 +230,37 @@ systemctl is-enabled chronyd
 
 Использовал Migration Guide от Almalinux. 
 
+```sh
+curl -O https://raw.githubusercontent.com/AlmaLinux/almalinux-deploy/master/almalinux-deploy.sh
+bash almalinux-deploy.sh -d
+```
+Миграция прошла без ошибок. 
 
+```sh
+cat /etc/os-release
+
+NAME="AlmaLinux"
+VERSION="8.9 (Midnight Oncilla)"
+ID="almalinux"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="8.9"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="AlmaLinux 8.9 (Midnight Oncilla)"
+ANSI_COLOR="0;34"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:almalinux:almalinux:8::baseos"
+HOME_URL="https://almalinux.org/"
+DOCUMENTATION_URL="https://wiki.almalinux.org/"
+BUG_REPORT_URL="https://bugs.almalinux.org/"
+
+ALMALINUX_MANTISBT_PROJECT="AlmaLinux-8"
+ALMALINUX_MANTISBT_PROJECT_VERSION="8.9"
+REDHAT_SUPPORT_PRODUCT="AlmaLinux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.9"
+```
+```sh
+grubby --info DEFAULT | grep AlmaLinux
+
+title="AlmaLinux (4.18.0-513.11.1.el8_9.x86_64) 8.9 (Midnight Oncilla)"
+```
 
