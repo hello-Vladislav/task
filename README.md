@@ -29,7 +29,7 @@ dnf install nginx
 systemctl start nginx
 systemctl enable nginx
 ```
-Отредактирован главный конфигурационный файл **/etc/nginx/nginx.conf**. Также, для удобства администрирования, в директории **/etc/nginx** создано еще две директории: **sites-available**, **sites-enabled**.  
+Отредактировал главный конфигурационный файл **/etc/nginx/nginx.conf**. Также, для удобства администрирования, в директории **/etc/nginx** создано еще две директории: **sites-available**, **sites-enabled**.  
 - Sites-available – директория для хранения конфигов каждого отдельного сайта.
 - Sites-enabled – директория, в которой создается символьная ссылка на конфигурационный файл сайта из sites-available. Позволяет включать/отключать нужный сайт при необходимости.
 
@@ -52,8 +52,12 @@ firewall-cmd --permanent --add-service=http
 firewall-cmd --permanent --add-service=https
 firewall-cmd --reload
 ```
-Для демонстрации работы перенаправления с http на https, создал сайт vmoshnin.ru (для того, чтобы обойти DNS, я отредактировал файл hosts).
+Для демонстрации работы перенаправления с **http** на **https**, создал сайт **vmoshnin.ru** (для того, чтобы обойти DNS, я отредактировал файл hosts).
 Как видно из скриншотов, перенаправление происходит. В качестве сертификата для сайта vmoshnin.ru использовал самоподписанный сертификат. 
+
+```sh
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/nginx/server.key -out /etc/pki/server.crt
+```
 
 ![image](https://github.com/hello-Vladislav/task/assets/29102877/45aa1855-eea5-4fc9-ac42-4cf0ffd6e2dc)
 
@@ -87,6 +91,14 @@ passwd vladislav
 Статус:	Получение списка каталогов "/test"...
 Статус:	Список каталогов "/test" извлечен
 ```
+## Установка утилит для диагностики сети
+
+```sh
+dnf install traceroute
+dnf install tcpdump
+dnf install telnet
+```
+
 ## PostgreSQL
 Установил PostgreSQL 15 версии
 ```sh
@@ -213,3 +225,10 @@ timedatectl set-timezone Asia/Krasnoyarsk
 systemctl status chronyd
 systemctl is-enabled chronyd
 ```
+
+## CentOS >>> Almalinux
+
+Использовал Migration Guide от Almalinux. 
+
+
+
